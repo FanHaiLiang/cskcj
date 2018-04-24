@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="csk.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="ty-transfer mt20 ml20" id="ued-transfer-1">
+        <div class="fl ty-transfer-list transfer-list-left">
+            <div class="ty-transfer-list-body">
+                <ul class="ty-tree-select ty-tree-select-left">
+                    <li tile="发票代码" value="fpdm">
+                        <div class="ty-tree-div">
+                            <span class="tyue-checkbox-txt">
+                                发票代码
+                            </span>
+                        </div>
+                    </li>
+                    <li tile="发票号码" value="fphm">
+                        <div class="ty-tree-div">
+                            <span class="tyue-checkbox-txt">
+                                发票号码
+                            </span>
+                        </div>
+                    </li>
+                    <li tile="开票日期" value="kprq">
+                        <div class="ty-tree-div">
+                            <span class="tyue-checkbox-txt">
+                                开票日期
+                            </span>
+                        </div>
+                    </li>
+                    <li tile="开票金额" value="kpje">
+                        <div class="ty-tree-div">
+                            <span class="tyue-checkbox-txt">
+                                开票金额
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="fl ty-transfer-operation">
+            <span class="add" style="line-height:20px;">
+                添加
+            </span>
+            <span class="allAdd">
+                全部添加
+            </span>
+            <span class="remove">
+                移除
+            </span>
+            <span class="allRem">
+                全部移除
+            </span>
+            <span class="sy">
+                上移
+            </span>
+            <span class="xy">
+                下移
+            </span>
+        </div>
+        <div class="fl ty-transfer-list transfer-list-right">
+            <div class="ty-transfer-list-body">
+                <ul class="ty-tree-select ty-tree-select-right">
+
+                </ul>
+            </div>
+        </div>
+        <div class="clearboth"></div>
+        <div class="layui-inline" style="text-align:center;width:100%;">
+            <!-- <button class="layui-btn layui-btn-normal qr znpxqd" style="margin-right:20px;margin-top:10px;">确认</button> -->
+            <button class="layui-btn layui-btn-normal qx znpxqx" style="margin-right:20px;margin-top:10px;">取消</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="csk.js"></script>
+    <script type="text/javascript">
+        $("#ued-transfer-1").transferItem();
+    </script>>
+</body>
+
+</html>
