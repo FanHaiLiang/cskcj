@@ -7,10 +7,6 @@
             init: function($this, options) {
                 this.el = $this;
                 this.ul = this.el.find('ul.ty-tree-select')
-                this.right = this.el.find('.transfer-list-right ul.ty-tree-select')
-                this.rightLis = this.el.find('.transfer-list-right ul.ty-tree-select li')
-                this.left = this.el.find('.transfer-list-left ul.ty-tree-select')
-                this.leftLis = this.el.find('.transfer-list-left ul.ty-tree-select li')
                 this.addBtn = this.el.find('.add')
                 this.allAddBtn = this.el.find('.allAdd')
                 this.removeBtn = this.el.find('.remove')
@@ -31,7 +27,8 @@
             xz: function() {
                 var me = this,
                     timer = null;
-                $('ul.ty-tree-select').on('click', 'li', function(e) {
+                //单机选中事件 大于100毫秒点击的算双击
+                this.ul.on('click', 'li', function(e) {
                         var _this = $(this);
                         clearTimeout(timer);
                         timer = setTimeout(function() {
@@ -40,7 +37,7 @@
                             } else {
                                 _this.addClass('active')
                             }
-                        }, 300);
+                        }, 100);
                     })
                     //双击添加事件
                 this.ul.on('dblclick', 'li', function(e) {
@@ -158,6 +155,7 @@
                     }
                 })
             },
+            //下移
             xy: function() {
                 var me = this;
                 var len = $('.transfer-list-right ul.ty-tree-select li').length;
@@ -175,4 +173,4 @@
 
         new transferItem(this, options)
     }
-})(jQuery);
+})(jQuery)
